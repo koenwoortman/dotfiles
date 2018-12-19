@@ -1,0 +1,8 @@
+{
+    "repo": "koenwoortman/dotfiles",
+    "branch": "master",
+    "symlinks": {
+        "bin/i3-battery": "bin/i3-battery",
+        "bin/i3-lock": "bin/i3-lock"
+    }
+}
