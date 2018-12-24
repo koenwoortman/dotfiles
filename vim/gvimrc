@@ -1,0 +1,20 @@
+" Remove menu bar
+set guioptions-=m
+
+" Remove toolbar
+set guioptions-=T
+
+" Remove right-hand scroll bar
+set guioptions-=r
+
+" Don't use GUI tabs
+set guioptions-=e
+
+" Remove left-hand scroll bar
+set guioptions-=L
+
+" Set the background color
+set background=dark
+
+" Set the gui font
+set guifont=Roboto\ Mono\ 13
