@@ -2,6 +2,7 @@
     "repo": "koenwoortman/dotfiles",
     "branch": "master",
     "symlinks": {
+        "git/config": ".gitconfig",
         "vim/gvimrc": ".gvimrc"
     }
 }

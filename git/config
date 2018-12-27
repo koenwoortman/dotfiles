@@ -1,0 +1,8 @@
+[include]
+    path = /home/koen/dotfiles/git/local
+
+[url "git@git.m2mobi.com:"]
+	insteadOf = "m2:"
+
+[core]
+	excludesfile = /home/koen/dotfiles/git/ignore
