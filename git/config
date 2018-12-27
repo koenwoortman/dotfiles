@@ -6,3 +6,6 @@
 
 [core]
 	excludesfile = /home/koen/dotfiles/git/ignore
+
+[alias]
+    graph = log --all --decorate --oneline --graph
