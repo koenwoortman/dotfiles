@@ -4,6 +4,8 @@
     "symlinks": {
         "git/config": ".gitconfig",
         "termite/config": ".config/termite/config",
-        "vim/gvimrc": ".gvimrc"
+        "vim/gvimrc": ".gvimrc",
+        "zsh/zshenv": ".zshenv",
+        "zsh/zshrc": ".config/zsh/.zshrc"
     }
 }
