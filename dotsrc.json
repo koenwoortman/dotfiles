@@ -3,6 +3,7 @@
     "branch": "master",
     "symlinks": {
         "git/config": ".gitconfig",
+        "termite/config": ".config/termite/config",
         "vim/gvimrc": ".gvimrc"
     }
 }
