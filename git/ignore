@@ -1,5 +1,6 @@
+.ackrc
+.editorconfig
 .idea
 .vscode
-.editorconfig
 *.swp
 *~
