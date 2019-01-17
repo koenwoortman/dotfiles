@@ -1,1 +1,26 @@
-alias l='ls -al'
+if [[ -f ~/.zplug/init.zsh ]]; then
+  source ~/.zplug/init.zsh
+
+  # Let zplug manage zplug
+  zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
+  # Install theme
+  zplug mafredri/zsh-async, from:github
+  zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+
+  zplug 'zsh-users/zsh-completions'
+  ZSH_AUTOSUGGEST_USE_ASYNC=true
+  zplug 'zsh-users/zsh-autosuggestions'
+  zplug 'zsh-users/zsh-syntax-highlighting'
+  zplug 'zsh-users/zsh-history-substring-search'
+
+  zplug load
+fi
+
+alias l='ls -l'
+alias ll='ls -al'
+
+export EDITOR=vim
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.config/zsh/zsh_history
