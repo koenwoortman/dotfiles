@@ -9,6 +9,7 @@
         "zsh/zshrc": ".config/zsh/.zshrc"
     },
     "hooks": [
-        "vim +PlugInstall +qall &"
+        "vim +PlugInstall +qall &",
+        "zplug install"
     ]
 }
