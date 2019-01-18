@@ -12,4 +12,9 @@
 
 [alias]
     amend = commit --amend
+    cm = commit -m
+    df = diff
     graph = log --all --decorate --oneline --graph
+    pop = stash pop
+    pl = pull
+    rb = rebase
