@@ -4,6 +4,7 @@
     "symlinks": {
         "git/config": ".gitconfig",
         "termite/config": ".config/termite/config",
+        "tmux/tmux.conf": ".tmux.conf",
         "vim/gvimrc": ".gvimrc",
         "zsh/zshenv": ".zshenv",
         "zsh/zshrc": ".config/zsh/.zshrc"
