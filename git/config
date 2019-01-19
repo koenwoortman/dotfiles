@@ -4,6 +4,9 @@
 [url "git@git.m2mobi.com:"]
 	insteadOf = "m2:"
 
+[url "git@github.com:koenwoortman/"]
+	insteadOf = "ksw:"
+
 [core]
 	excludesfile = /home/koen/dotfiles/git/ignore
 
