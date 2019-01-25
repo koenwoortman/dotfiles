@@ -21,3 +21,4 @@
     pop = stash pop
     pl = pull
     rb = rebase
+    wip = !git add . && git commit -m "WIP"
