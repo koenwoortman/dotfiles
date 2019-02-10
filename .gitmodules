@@ -1,9 +1,0 @@
-[submodule "modules/vim-plug"]
-	path = modules/vim-plug
-	url = https://github.com/junegunn/vim-plug
-[submodule "modules/dmenu"]
-	path = modules/dmenu
-	url = git@github.com:koenwoortman/dmenu.git
-[submodule "modules/st"]
-	path = modules/st
-	url = git@github.com:koenwoortman/st.git
