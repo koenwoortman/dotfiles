@@ -10,6 +10,9 @@
 [core]
 	excludesfile = /home/koen/dotfiles/git/ignore
 
+[diff]
+    tool = vimdiff
+
 [merge]
     tool = vimdiff
 
