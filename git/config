@@ -1,27 +1,25 @@
-[include]
-    path = /home/koen/dotfiles/git/local
-
-[url "git@git.m2mobi.com:"]
-	insteadOf = "m2:"
-
-[url "git@github.com:koenwoortman/"]
-	insteadOf = "ksw:"
-
+[user]
+  email = k.woortman@m2mobi.com
+  name = Koen Woortman
+[url "git@git.m2mobi.com:"]                                                                                                                                                                
+  insteadOf = "m2:" 
 [core]
-	excludesfile = /home/koen/dotfiles/git/ignore
-
+  editor = nvim
 [diff]
-    tool = vimdiff
-
+  tool = vimdiff
 [merge]
-    tool = vimdiff
-
+  tool = vimdiff
+[status]
+  short = true
+  branch = true
+[pager]
+        branch = false
 [alias]
-    amend = commit --amend
-    cm = commit -m
-    df = diff
-    graph = log --all --decorate --oneline --graph
-    pop = stash pop
-    pl = pull
-    rb = rebase
-    wip = !git add . && git commit -m "WIP"
+  amend = commit --amend
+  graph = log --all --decorate --oneline --graph
+  last = log -1 HEAD
+  pop = stash pop
+  prune = fetch --prune
+  stash-all = stash save --include-untracked
+  undo = reset --soft HEAD^
+  unstage = reset HEAD --

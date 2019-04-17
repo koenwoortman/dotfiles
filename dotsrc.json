@@ -2,15 +2,9 @@
     "repo": "koenwoortman/dotfiles",
     "branch": "master",
     "symlinks": {
-        "git/config": ".gitconfig",
-        "termite/config": ".config/termite/config",
-        "tmux/tmux.conf": ".tmux.conf",
-        "vim/gvimrc": ".gvimrc",
-        "zsh/zshenv": ".zshenv",
-        "zsh/zshrc": ".config/zsh/.zshrc"
-    },
-    "hooks": [
-        "vim +PlugInstall +qall &",
-        "zplug install"
-    ]
+        "composer": ".config/composer",
+        "fish": ".config/fish",
+        "git": ".config/git",
+        "nvim": ".config/nvim"
+    }
 }

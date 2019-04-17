@@ -1,8 +1,6 @@
 .ackrc
-.editorconfig
 .idea
 .vscode
 *.swp
 *~
-taskell.md
 tags

@@ -1,2 +1,4 @@
 # Local git configuration
-git/local
+composer/vendor
+fish/fish_variables
+nvim/.netrwhist
