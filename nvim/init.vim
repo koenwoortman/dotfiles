@@ -4,6 +4,7 @@ let g:ale_completion_enabled = 1
 
 " ~> Load plugins
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'airblade/vim-gitgutter'
 Plug 'dag/vim-fish'
 Plug 'mhartington/nvim-typescript'
 Plug 'morhetz/gruvbox'

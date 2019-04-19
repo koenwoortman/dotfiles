@@ -1,10 +1,13 @@
 [user]
   email = k.woortman@m2mobi.com
   name = Koen Woortman
-[url "git@git.m2mobi.com:"]                                                                                                                                                                
+[url "git@git.m2mobi.com:"]
   insteadOf = "m2:" 
+[color]
+  ui = true
 [core]
   editor = nvim
+  pager = less -r
 [diff]
   tool = vimdiff
 [merge]
@@ -13,7 +16,7 @@
   short = true
   branch = true
 [pager]
-        branch = false
+  branch = false
 [alias]
   amend = commit --amend
   graph = log --all --decorate --oneline --graph
