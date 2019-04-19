@@ -53,6 +53,9 @@ set relativenumber
 set exrc
 set secure
 
+" ~> Show newline
+set list listchars=tab:>\ ,trail:-,eol:¬
+
 " ~> Ale config
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
