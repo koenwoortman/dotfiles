@@ -7,9 +7,12 @@ set PATH ~/bin ~/.config/composer/vendor/bin $PATH
 
 alias d="cd"
 alias l="ls -alvh --group-directories-first"
+alias ll="ls -lvh --group-directories-first"
 alias g="git"
 alias ga="git add"
 alias gc="git commit"
+alias gco="git checkout"
+alias gcof="git checkout --"
 alias gl="git log"
 alias gmv="git mv"
 alias grm="git rm"
