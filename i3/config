@@ -4,8 +4,8 @@ set $mod Mod4
 # Variables for navigation keys
 set $left h
 set $down j
-set $right k
-set $up l
+set $up k
+set $right l
 
 # NOTE: this font needs to be installed seperatly
 font pango:Roboto Mono 12
@@ -35,8 +35,8 @@ bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
 # Split direction
-bindsym $mod+minus split h
-bindsym $mod+backslash split v
+bindsym $mod+backslash split h
+bindsym $mod+minus split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -57,6 +57,10 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+# Gaps
+for_window [class=".*"] border pixel 0
+gaps inner 10
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -119,4 +123,8 @@ mode "resize" {
 # Bar
 bar {
   status_command i3status
+  position top
 }
+
+# Set a solid background for now
+exec_always xsetroot -solid "#458588"
