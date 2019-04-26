@@ -39,11 +39,10 @@ bindsym $mod+Shift+$right move right
 # Splits
 bindsym $mod+backslash split h
 bindsym $mod+minus split v
-bindsym $mod+e layout toggle split
 
 # Layouts
-bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen toggle
 
 # Gaps
@@ -53,9 +52,9 @@ smart_gaps on
 gaps inner 10
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.focused          #282828 #282828 #ffffff #2e9ef4   #285577
+client.focused_inactive #282828 #282828 #ffffff #484e50   #5f676a
+client.unfocused        #282828 #282828 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
@@ -81,6 +80,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -102,6 +102,8 @@ mode "resize" {
   bindsym Escape mode "default"
 }
 
+set $bar-bg #282828
+
 # Bar
 bar {
   status_command i3status
@@ -114,13 +116,13 @@ bar {
   bindsym button5 nop
 
   colors {
-    background #504945
+    background $bar-bg
     statusline #ebdbb2
     separator #928374
 
-    focused_workspace  #458588 #458588 #ffffff
+    focused_workspace  $bar-bg $bar-bg #ffffff
     active_workspace   #333333 #5f676a #ffffff
-    inactive_workspace #333333 #222222 #888888
+    inactive_workspace $bar-bg $bar-bg #888888
     urgent_workspace   #cc241d #cc241d #ffffff
     binding_mode       #2f343a #900000 #ffffff
   }
@@ -131,9 +133,6 @@ bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Really exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
-
-# Set a solid background for now
-exec_always xsetroot -solid "#458588"
 
 # Lock the screen
 bindsym $mod+0 exec i3lock --color=504945
