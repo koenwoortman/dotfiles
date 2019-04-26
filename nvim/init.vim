@@ -53,17 +53,13 @@ set relativenumber
 set exrc
 set secure
 
+" ~> Search
+set smartcase
+
 " ~> Show newline
 set list listchars=tab:>\ ,trail:-,eol:¬
 
 " ~> Ale config
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'php': ['phpcbf']
-\}
-let g:ale_linters = {
-\   'php': ['php', 'phpcs', 'phpmd'],
-\}
 let g:ale_fix_on_save = 1
 let g:ale_set_highlights = 0
 let g:ale_sign_column_always = 1
@@ -72,6 +68,14 @@ let g:ale_php_phpcbf_use_global = 1
 let g:ale_php_phpcs_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
 let g:ale_php_phpcbf_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
 let g:ale_php_phpstan_level = 1
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'php': ['phpcbf']
+\}
+let g:ale_linters = {
+\   'php': ['php', 'phpcs', 'phpmd'],
+\}
 
 
 "   <leader>; - Browser currently open buffers
@@ -85,18 +89,8 @@ nmap <leader>t :Denite file/rec -split=floating -winrow=1<CR>
 nnoremap <leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
 nnoremap <leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
 
-" Custom options for Denite
-"   auto_resize             - Auto resize the Denite window height automatically.
-"   prompt                  - Customize denite prompt
-"   direction               - Specify Denite window direction as directly below current pane
-"   winminheight            - Specify min height for Denite window
-"   highlight_mode_insert   - Specify h1-CursorLine in insert mode
-"   prompt_highlight        - Specify color of prompt
-"   highlight_matched_char  - Matched characters highlight
-"   highlight_matched_range - matched range highlight
 let s:denite_options = {'default' : {
 \ 'auto_resize': 1,
-\ 'prompt': 'λ:',
 \ 'direction': 'rightbelow',
 \ 'winminheight': '10',
 \ 'highlight_mode_insert': 'Visual',

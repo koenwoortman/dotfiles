@@ -5,6 +5,8 @@ set -U EDITOR nvim
 
 set PATH ~/bin ~/.config/composer/vendor/bin $PATH
 
+set fish_greeting
+
 alias d="cd"
 alias l="ls -alvh --group-directories-first"
 alias ll="ls -lvh --group-directories-first"
