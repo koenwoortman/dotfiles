@@ -5,6 +5,11 @@
         "composer": ".config/composer",
         "fish": ".config/fish",
         "git": ".config/git",
-        "nvim": ".config/nvim"
+        "i3": ".config/i3",
+        "nvim": ".config/nvim",
+        "termite": ".config/termite",
+        "xdg/mimeapps.list": ".config/mimeapps.list",
+        "xdg/user-dirs.dirs": ".config/user-dirs.dirs",
+        "xorg/xinitrc": ".xinitrc"
     }
 }
