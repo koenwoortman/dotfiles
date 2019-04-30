@@ -6,14 +6,15 @@ let g:ale_completion_enabled = 1
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'dag/vim-fish'
-Plug 'mhartington/nvim-typescript'
+Plug 'junegunn/fzf.vim'
+" Plug 'mhartington/nvim-typescript'
 Plug 'morhetz/gruvbox'
-Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-vinegar'
 Plug 'vimwiki/vimwiki'
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 call plug#end()
 
 " ~> Break compatibility with VI
@@ -59,23 +60,26 @@ set smartcase
 " ~> Show newline
 set list listchars=tab:>\ ,trail:-,eol:¬
 
-" ~> Ale config
-let g:ale_fix_on_save = 1
-let g:ale_set_highlights = 0
-let g:ale_sign_column_always = 1
-let g:ale_php_phpcs_use_global = 1
-let g:ale_php_phpcbf_use_global = 1
-let g:ale_php_phpcs_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
-let g:ale_php_phpcbf_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
-let g:ale_php_phpstan_level = 1
+" ~> No linebreaks in the middle of a word
+set linebreak
 
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'php': ['phpcbf']
-\}
-let g:ale_linters = {
-\   'php': ['php', 'phpcs', 'phpmd'],
-\}
+" ~> Ale config
+" let g:ale_fix_on_save = 1
+" let g:ale_set_highlights = 0
+" let g:ale_sign_column_always = 1
+" let g:ale_php_phpcs_use_global = 1
+" let g:ale_php_phpcbf_use_global = 1
+" let g:ale_php_phpcs_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
+" let g:ale_php_phpcbf_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
+" let g:ale_php_phpstan_level = 1
+
+" let g:ale_fixers = {
+" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+" \   'php': ['phpcbf']
+" \}
+" let g:ale_linters = {
+" \   'php': ['php', 'phpcs', 'phpmd'],
+" \}
 
 
 "   <leader>; - Browser currently open buffers
@@ -84,22 +88,22 @@ let g:ale_linters = {
 "   <leader>j - Search current directory for occurences of word under cursor
 "
 " ~> Denite config
-nmap <leader>; :Denite buffer -split=floating -winrow=1<CR>
-nmap <leader>t :Denite file/rec -split=floating -winrow=1<CR>
-nnoremap <leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
-nnoremap <leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
+" nmap <leader>; :Denite buffer -split=floating -winrow=1<CR>
+" nmap <leader>p :Denite file/rec -split=floating -winrow=1<CR>
+" nnoremap <leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
+" nnoremap <leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
 
-let s:denite_options = {'default' : {
-\ 'auto_resize': 1,
-\ 'direction': 'rightbelow',
-\ 'winminheight': '10',
-\ 'highlight_mode_insert': 'Visual',
-\ 'highlight_mode_normal': 'Visual',
-\ 'prompt_highlight': 'Function',
-\ 'highlight_matched_char': 'Function',
-\ 'highlight_matched_range': 'Normal',
-\ 'split': 'floating'
-\ }}
+" let s:denite_options = {'default' : {
+" \ 'auto_resize': 1,
+" \ 'direction': 'rightbelow',
+" \ 'winminheight': '10',
+" \ 'highlight_mode_insert': 'Visual',
+" \ 'highlight_mode_normal': 'Visual',
+" \ 'prompt_highlight': 'Function',
+" \ 'highlight_matched_char': 'Function',
+" \ 'highlight_matched_range': 'Normal',
+" \ 'split': 'floating'
+" \ }}
 
 
 " ~> Deoplete config
