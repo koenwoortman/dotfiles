@@ -6,15 +6,15 @@ let g:ale_completion_enabled = 1
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'dag/vim-fish'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Plug 'mhartington/nvim-typescript'
 Plug 'morhetz/gruvbox'
-" Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-vinegar'
 Plug 'vimwiki/vimwiki'
-" Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 call plug#end()
 
 " ~> Break compatibility with VI
@@ -64,55 +64,30 @@ set list listchars=tab:>\ ,trail:-,eol:¬
 set linebreak
 
 " ~> Ale config
-" let g:ale_fix_on_save = 1
-" let g:ale_set_highlights = 0
-" let g:ale_sign_column_always = 1
-" let g:ale_php_phpcs_use_global = 1
-" let g:ale_php_phpcbf_use_global = 1
-" let g:ale_php_phpcs_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
-" let g:ale_php_phpcbf_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
-" let g:ale_php_phpstan_level = 1
+let g:ale_fix_on_save = 1
+let g:ale_set_highlights = 0
+let g:ale_sign_column_always = 1
+let g:ale_php_phpcs_use_global = 1
+let g:ale_php_phpcbf_use_global = 1
+let g:ale_php_phpcs_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
+let g:ale_php_phpcbf_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
+let g:ale_php_phpstan_level = 1
 
-" let g:ale_fixers = {
-" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-" \   'php': ['phpcbf']
-" \}
-" let g:ale_linters = {
-" \   'php': ['php', 'phpcs', 'phpmd'],
-" \}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'php': ['phpcbf']
+\}
+let g:ale_linters = {
+\   'php': ['php', 'phpcs', 'phpmd'],
+\}
 
+" ~> Coc
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
 
-"   <leader>; - Browser currently open buffers
-"   <leader>t - Browse list of files in current directory
-"   <leader>g - Search current directory for occurences of given term and close window if no results
-"   <leader>j - Search current directory for occurences of word under cursor
-"
-" ~> Denite config
-" nmap <leader>; :Denite buffer -split=floating -winrow=1<CR>
-" nmap <leader>p :Denite file/rec -split=floating -winrow=1<CR>
-" nnoremap <leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
-" nnoremap <leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
-
-" let s:denite_options = {'default' : {
-" \ 'auto_resize': 1,
-" \ 'direction': 'rightbelow',
-" \ 'winminheight': '10',
-" \ 'highlight_mode_insert': 'Visual',
-" \ 'highlight_mode_normal': 'Visual',
-" \ 'prompt_highlight': 'Function',
-" \ 'highlight_matched_char': 'Function',
-" \ 'highlight_matched_range': 'Normal',
-" \ 'split': 'floating'
-" \ }}
-
-
-" ~> Deoplete config
-" let g:deoplete#enable_at_startup = 1
-
-" ~> Neosnippet config
-" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-" smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" ~> FZF
+nmap <leader>p :Files<CR>
+nmap <leader>b :Buffers<CR>
 
 " ~> Vimwiki config
 let g:vimwiki_list = [{'path': '~/wiki/',
