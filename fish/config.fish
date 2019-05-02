@@ -8,6 +8,8 @@ set PATH ~/bin ~/.config/composer/vendor/bin $PATH
 set fish_greeting
 
 alias d="cd"
+alias e="nvim (git ls-tree -r --name-only HEAD| fzf)"
+alias ea="nvim (fzf)"
 alias l="ls -alvh --group-directories-first"
 alias ll="ls -lvh --group-directories-first"
 alias g="git"
