@@ -64,6 +64,9 @@ set list listchars=tab:>\ ,trail:-,eol:¬
 " ~> No linebreaks in the middle of a word
 set linebreak
 
+" ~> Keep some screen space
+set scrolloff=3
+
 " ~> Ale config
 let g:ale_fix_on_save = 1
 let g:ale_set_highlights = 0
@@ -90,7 +93,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " ~> FZF
-nmap <leader>p :Files<CR>
+nmap <leader>p :GFiles<CR>
 nmap <leader>b :Buffers<CR>
 
 " ~> Vimwiki config
