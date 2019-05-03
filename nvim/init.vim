@@ -94,6 +94,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 " ~> FZF
 nmap <leader>p :GFiles<CR>
+nmap <leader>P :Files<CR>
 nmap <leader>b :Buffers<CR>
 
 " ~> Vimwiki config

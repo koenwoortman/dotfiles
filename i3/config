@@ -48,7 +48,6 @@ bindsym $mod+f fullscreen toggle
 # Gaps
 for_window [class=".*"] border pixel 3
 smart_borders on
-smart_gaps on
 gaps inner 10
 
 # class                 border  backgr. text    indicator child_border
