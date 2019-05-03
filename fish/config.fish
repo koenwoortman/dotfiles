@@ -10,7 +10,7 @@ set fish_escape_delay_ms 10
 
 set -U EDITOR nvim
 
-set PATH ~/bin ~/.config/composer/vendor/bin $PATH
+set PATH ~/bin ~/.config/composer/vendor/bin ~/.local/bin $PATH
 
 set fish_greeting
 
