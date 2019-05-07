@@ -45,3 +45,27 @@ alias zs="zypper search"
 
 alias maria="mysql -p"
 alias ptest="phpunit -c tests/phpunit.xml --testdox --testsuite"
+
+# set fish_color_normal white
+set fish_color_command green
+# set fish_color_quote
+# set fish_color_redirection
+# set fish_color_end
+set fish_color_error red
+# set fish_color_param white
+# set fish_color_comment
+# set fish_color_match
+# set fish_color_selection white
+# set fish_color_search_match white
+# set fish_color_operator white
+# set fish_color_escape white
+# set fish_color_cwd white
+# set fish_color_autosuggestion white
+# set fish_color_user white
+# set fish_color_host white
+# set fish_color_cancel white
+# set fish_pager_color_prefix
+# set fish_pager_color_completion
+# set fish_pager_color_description
+# set fish_pager_color_progress
+# set fish_pager_color_secondary
