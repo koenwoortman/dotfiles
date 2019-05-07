@@ -139,3 +139,5 @@ bindsym $mod+0 exec i3lock --color=504945
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
 bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle
+
+bindsym Print exec --no-startup-id scrot ~/desktop/Screenshots/%b%d::%H%M%S.png
