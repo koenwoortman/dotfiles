@@ -68,6 +68,20 @@ set linebreak
 " ~> Keep some screen space
 set scrolloff=3
 
+" ~> Statusline
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
+set statusline=
+set statusline+=%{StatuslineGit()}
+set statusline+=\ %f
+
 " ~> Ale config
 let g:ale_fix_on_save = 1
 let g:ale_set_highlights = 0
@@ -80,10 +94,12 @@ let g:ale_php_phpstan_level = 1
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'php': ['phpcbf']
+\   'php': ['phpcbf'],
+\   'python': ['autopep8'],
 \}
 let g:ale_linters = {
 \   'php': ['php', 'phpcs', 'phpmd'],
+\   'python': ['flake8', 'pylint'],
 \}
 
 " ~> Coc
