@@ -13,6 +13,7 @@ Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
