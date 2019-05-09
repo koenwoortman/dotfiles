@@ -1,22 +1,26 @@
-" Enable completion where available.
-" This setting must be set before ALE is loaded.
-let g:ale_completion_enabled = 1
-
 " ~> Load plugins
 call plug#begin('~/.local/share/nvim/plugged')
+
+" ~> Interface
 Plug 'airblade/vim-gitgutter'
-Plug 'dag/vim-fish'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'tpope/vim-vinegar'
+
+" ~> Syntax
+Plug 'dag/vim-fish'
 Plug 'stanangeloff/php.vim'
+
+" ~> Coding
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
+
+" ~> For fuzzy finding
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" ~> For personal notes
 Plug 'vimwiki/vimwiki'
-Plug 'w0rp/ale'
 call plug#end()
 
 " ~> Break compatibility with VI
@@ -68,6 +72,9 @@ set linebreak
 " ~> Keep some screen space
 set scrolloff=3
 
+" ~> Use spacebar as leader
+let mapleader = "\<Space>"
+
 " ~> Statusline
 function! GitBranch()
   return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
@@ -81,33 +88,6 @@ endfunction
 set statusline=
 set statusline+=%{StatuslineGit()}
 set statusline+=\ %f
-
-" ~> Ale config
-let g:ale_fix_on_save = 1
-let g:ale_set_highlights = 0
-let g:ale_sign_column_always = 1
-let g:ale_php_phpcs_use_global = 1
-let g:ale_php_phpcbf_use_global = 1
-let g:ale_php_phpcs_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
-let g:ale_php_phpcbf_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
-let g:ale_php_phpstan_level = 1
-
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'php': ['phpcbf'],
-\   'python': ['autopep8'],
-\}
-let g:ale_linters = {
-\   'php': ['php', 'phpcs', 'phpmd'],
-\   'python': ['flake8', 'pylint'],
-\}
-
-" ~> Coc
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
 
 " ~> FZF
 nmap <leader>p :GFiles<CR>
