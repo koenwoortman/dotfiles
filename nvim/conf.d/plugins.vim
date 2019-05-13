@@ -12,7 +12,10 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 
-" ~> For fuzzy finding
+" ~> Autocomplete
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+
+" ~> Fuzzy finding
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -28,4 +31,5 @@ Plug 'stanangeloff/php.vim'
 " ~> Language: javascript
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
 call plug#end()

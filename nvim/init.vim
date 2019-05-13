@@ -55,6 +55,10 @@ set scrolloff=3
 " ~> Use spacebar as leader
 let mapleader = "\<Space>"
 
+" ~> Mappings
+nmap <leader>w :w<CR>
+nmap <leader><leader>w :wq<CR>
+
 " ~> FZF
 nmap <leader>p :GFiles<CR>
 nmap <leader>P :Files<CR>
