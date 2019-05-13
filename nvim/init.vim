@@ -40,6 +40,9 @@ set relativenumber
 set exrc
 set secure
 
+" Better display for messages
+set cmdheight=2
+
 " ~> Search
 set smartcase
 
@@ -51,6 +54,9 @@ set linebreak
 
 " ~> Keep some screen space
 set scrolloff=3
+
+" always show signcolumns
+set signcolumn=yes
 
 " ~> Use spacebar as leader
 let mapleader = "\<Space>"
