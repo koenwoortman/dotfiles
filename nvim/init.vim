@@ -47,7 +47,7 @@ set cmdheight=2
 set smartcase
 
 " ~> Show newline
-set list listchars=tab:>\ ,trail:-,eol:¬
+set list listchars=tab:\ \ ,trail:-,eol:¬
 
 " ~> No linebreaks in the middle of a word
 set linebreak
