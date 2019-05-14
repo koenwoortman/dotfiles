@@ -1,0 +1,28 @@
+{
+    // Window
+    "window.menuBarVisibility": "toggle",
+
+    // Editor
+    "editor.fontFamily": "'Roboto Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.suggest.showIcons": false,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+
+    // Workbench
+    "workbench.colorTheme": "Gruvbox Dark (Medium)",
+    "workbench.editor.showIcons": false,
+    "workbench.activityBar.visible": false,
+    "workbench.iconTheme": null,
+    "workbench.startupEditor": "newUntitledFile",
+
+    // Explorer
+    "explorer.openEditors.visible": 0,
+
+    // phpcs
+    "phpcs.standard": "~/m2mobi/m2mobi-coding-standard/M2mobi/ruleset.xml",
+
+    // vim
+    "vim.leader": "<space>",
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/bin/nvim",
+}
