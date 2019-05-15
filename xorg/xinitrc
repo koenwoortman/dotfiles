@@ -19,5 +19,9 @@ if [ -f /usr/bin/i3 ]; then
   # Set a solid background for now
   xsetroot -solid "#458588"
 
+  cat $HOME/.config/i3/config.base \
+    $HOME/.config/i3/config.local > $HOME/.config/i3/config
+  exec /usr/bin/i3
+
   exec i3
 fi
