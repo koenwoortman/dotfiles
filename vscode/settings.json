@@ -5,6 +5,7 @@
     "editor.suggest.showIcons": false,
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
+    "editor.renderFinalNewline": false,
 
     "workbench.colorTheme": "Gruvbox Dark (Medium)",
     "workbench.editor.showIcons": false,
@@ -15,7 +16,12 @@
 
     "explorer.openEditors.visible": 0,
 
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.egg-info": true,
         "**/node_modules": true
     },
 
