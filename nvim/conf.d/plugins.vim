@@ -32,4 +32,7 @@ Plug 'stanangeloff/php.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
+
+" ~> Language: bash/bats
+Plug 'aliou/bats.vim'
 call plug#end()
