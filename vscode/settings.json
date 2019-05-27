@@ -27,6 +27,8 @@
 
     "phpcs.standard": "~/m2mobi/m2mobi-coding-standard/M2mobi/ruleset.xml",
 
+    "python.autoComplete.addBrackets": true,
+
     "vim.leader": "<space>",
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/bin/nvim"
