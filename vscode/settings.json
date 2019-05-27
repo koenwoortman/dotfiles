@@ -9,7 +9,7 @@
 
     "workbench.colorTheme": "Gruvbox Dark (Medium)",
     "workbench.editor.showIcons": false,
-    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreview": true,
     "workbench.activityBar.visible": false,
     "workbench.iconTheme": null,
     "workbench.startupEditor": "newUntitledFile",
