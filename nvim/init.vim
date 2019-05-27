@@ -61,6 +61,9 @@ set signcolumn=yes
 " ~> Use spacebar as leader
 let mapleader = "\<Space>"
 
+" ~> Enable all Python syntax highlighting features
+let python_highlight_all = 1
+
 " ~> Mappings
 nmap <leader>w :w<CR>
 nmap <leader><leader>w :wq<CR>
