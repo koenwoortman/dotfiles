@@ -12,7 +12,9 @@ set -U EDITOR nvim
 
 set TERM xterm-termite
 
-set PATH ~/bin ~/.config/composer/vendor/bin ~/.local/bin $PATH
+set PATH ~/bin ~/.config/composer/vendor/bin ~/.local/bin ~/.rbenv/bin $PATH
+
+status --is-interactive; and source (rbenv init -|psub)
 
 set fish_greeting
 
