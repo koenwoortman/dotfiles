@@ -1,5 +1,9 @@
 {
     "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": 0,
+
+    "update.enableWindowsBackgroundUpdates": false,
+    "update.mode": "manual",
 
     "editor.fontFamily": "'Roboto Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.suggest.showIcons": false,
