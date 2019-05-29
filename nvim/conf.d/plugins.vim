@@ -35,4 +35,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 
 " ~> Language: bash/bats
 Plug 'aliou/bats.vim'
+
+" ~> Language: toml
+Plug 'cespare/vim-toml'
 call plug#end()
