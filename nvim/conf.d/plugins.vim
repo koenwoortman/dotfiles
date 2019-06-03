@@ -38,4 +38,8 @@ Plug 'aliou/bats.vim'
 
 " ~> Language: toml
 Plug 'cespare/vim-toml'
+
+" ~> Language: python
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+
 call plug#end()
