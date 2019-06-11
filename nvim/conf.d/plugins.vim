@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " ~> Interface
 Plug 'airblade/vim-gitgutter'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-vinegar'
 
