@@ -12,6 +12,7 @@
 		"Package Control",
 		"Phpcs",
 		"ProjectManager",
+		"requirementstxt",
 		"SublimeLinter",
 		"SublimeLinter-flake8",
 		"SublimeLinter-php",

@@ -1,6 +1,7 @@
 {
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Soft) NDC.sublime-color-scheme",
+	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
 		"node_modules/**",
@@ -14,7 +15,7 @@
 		".git",
 		"*.egg-info"
 	],
-	"font_size": 11,
+	"font_size": 10,
 	"ignored_packages":
 	[
 		"Six",
@@ -28,11 +29,10 @@
 		"dist/**",
 		"tmp/**"
 	],
-    "translate_tabs_to_spaces": true,
-    "ensure_newline_at_eof_on_save": true,
-    "trim_trailing_white_space_on_save": true,
 	"neovintageous_build_version": 11100,
 	"theme": "gruvbox.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
 	"vintage_lines.force_mode": true,
 	"vintageous_use_ctrl_keys": null,
 	"vintageous_use_super_keys": null
