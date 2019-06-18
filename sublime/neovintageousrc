@@ -3,3 +3,5 @@
 let mapleader=<space>
 
 nnoremap <leader>p :ShowOverlay overlay=goto show_files=true<CR>
+nnoremap <leader>h :FocusNeighboringGroup forward=false<CR>
+nnoremap <leader>l :FocusNeighboringGroup<CR>

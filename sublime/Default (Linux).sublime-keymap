@@ -1,3 +1,3 @@
 [
-	{ "keys": ["ctrl+space"], "command": "extended_switcher", "args": {"list_mode": "window"} }	
+	{ "keys": ["ctrl+space"], "command": "extended_switcher", "args": {"list_mode": "window"} }
 ]
