@@ -1,0 +1,5 @@
+" Type :h neovintageousrc for help.
+
+let mapleader=<space>
+
+nnoremap <leader>p :ShowOverlay overlay=goto show_files=true<CR>

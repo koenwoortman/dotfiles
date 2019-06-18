@@ -1,0 +1,23 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Dracula Color Scheme",
+		"ExtendedTabSwitcher",
+		"gruvbox",
+		"NeoVintageous",
+		"Package Control",
+		"Phpcs",
+		"ProjectManager",
+		"SublimeLinter",
+		"SublimeLinter-flake8",
+		"SublimeLinter-php",
+		"SublimeLinter-rubocop",
+		"SublimeLinter-ruby",
+		"TypeScript",
+		"VintageLines"
+	]
+}
