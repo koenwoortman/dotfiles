@@ -29,6 +29,7 @@
 		"dist/**",
 		"tmp/**"
 	],
+  "enable_tab_scrolling": false,
 	"neovintageous_build_version": 11100,
 	"theme": "gruvbox.sublime-theme",
 	"translate_tabs_to_spaces": true,
