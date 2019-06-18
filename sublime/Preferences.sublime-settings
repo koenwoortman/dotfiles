@@ -28,6 +28,7 @@
 		"dist/**",
 		"tmp/**"
 	],
+    "translate_tabs_to_spaces": true,
 	"neovintageous_build_version": 11100,
 	"theme": "gruvbox.sublime-theme",
 	"vintage_lines.force_mode": true,
