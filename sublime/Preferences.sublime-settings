@@ -29,6 +29,8 @@
 		"tmp/**"
 	],
     "translate_tabs_to_spaces": true,
+    "ensure_newline_at_eof_on_save": true,
+    "trim_trailing_white_space_on_save": true,
 	"neovintageous_build_version": 11100,
 	"theme": "gruvbox.sublime-theme",
 	"vintage_lines.force_mode": true,
