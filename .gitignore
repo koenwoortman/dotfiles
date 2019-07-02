@@ -6,3 +6,6 @@ nvim/.netrwhist
 # Don't track local and generated i3 config
 i3/config
 i3/config.local
+
+# Don't track new changes to sublime settings
+sublime/Preferences.sublime-settings
