@@ -12,10 +12,6 @@ set termguicolors
 
 colorscheme gruvbox
 set background=light
-let g:gruvbox_contrast_light = 'hard'
-let g:gruvbox_bold = 1
-let g:gruvbox_italic = 1
-let g:gruvbox_underline = 1
 
 " ~> File type detection filetype on
 filetype plugin on
@@ -66,7 +62,3 @@ set signcolumn=yes
 
 " ~> Enable all Python syntax highlighting features
 let python_highlight_all = 1
-
-" ~> Vimwiki config
-let g:vimwiki_list = [{'path': '~/wiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]

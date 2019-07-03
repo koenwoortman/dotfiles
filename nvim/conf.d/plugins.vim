@@ -44,3 +44,13 @@ Plug 'cespare/vim-toml'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 call plug#end()
+
+" ~> Gruvbox
+let g:gruvbox_contrast_light = 'hard'
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
+let g:gruvbox_underline = 1
+
+" ~> Vimwiki config
+let g:vimwiki_list = [{'path': '~/wiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]

@@ -7,6 +7,12 @@ nmap <leader>w :w<CR>
 " Quicker write and quit
 nmap <leader><leader>w :wq<CR>
 
+" Quicker write
+nmap <leader>q :q<CR>
+
+" Source $MYVIMRC
+nmap <leader>rrc :so $MYVIMRC<CR>
+
 " ~> FZF
 nmap <leader>p :GFiles<CR>
 nmap <leader>P :Files<CR>
