@@ -62,3 +62,14 @@ set signcolumn=yes
 
 " ~> Enable all Python syntax highlighting features
 let python_highlight_all = 1
+
+" ~> Trim whitespace function
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+
+" ~> Trim whitespaces on save
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
