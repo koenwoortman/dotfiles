@@ -9,7 +9,13 @@ set nocompatible
 " ~> Set colors
 syntax on
 set termguicolors
+
 colorscheme gruvbox
+set background=light
+let g:gruvbox_contrast_light = 'hard'
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
+let g:gruvbox_underline = 1
 
 " ~> File type detection filetype on
 filetype plugin on
@@ -58,20 +64,8 @@ set scrolloff=3
 " always show signcolumns
 set signcolumn=yes
 
-" ~> Use spacebar as leader
-let mapleader = "\<Space>"
-
 " ~> Enable all Python syntax highlighting features
 let python_highlight_all = 1
-
-" ~> Mappings
-nmap <leader>w :w<CR>
-nmap <leader><leader>w :wq<CR>
-
-" ~> FZF
-nmap <leader>p :GFiles<CR>
-nmap <leader>P :Files<CR>
-nmap <leader>b :Buffers<CR>
 
 " ~> Vimwiki config
 let g:vimwiki_list = [{'path': '~/wiki/',
