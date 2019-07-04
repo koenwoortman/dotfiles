@@ -8,6 +8,7 @@ Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-vinegar'
 
 " ~> Coding
+Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -44,6 +45,12 @@ Plug 'cespare/vim-toml'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 call plug#end()
+
+let g:closetag_filenames = '*.html,*.jsx,*.tsx'
+let g:closetag_regions = {
+    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+    \ 'javascript.jsx': 'jsxRegion',
+    \ }
 
 " ~> Gruvbox
 let g:gruvbox_contrast_light = 'medium'
