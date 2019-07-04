@@ -73,3 +73,14 @@ endfun
 
 " ~> Trim whitespaces on save
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" Coc Styling
+hi CocErrorSign   guifg=#ff0000
+hi CocWarningSign guifg=#ff922b
+hi CocInfoSign    guifg=#15aabf
+hi CocHintSign    guifg=#15aabf
+
+hi default link CocErrorHighlight CocHighlightText
+hi default link CocWarningSign CocHighlightText
+hi default link CocInfoHighlight CocHighlightText
+hi default link CocHintHighlight CocHighlightText

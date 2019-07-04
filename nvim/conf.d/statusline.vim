@@ -6,7 +6,7 @@ fun! StatusDiagnostic() abort
     call add(msgs, ' ' . info['error'])
   endif
   if get(info, 'warning', 0)
-    call add(msgs, ' ' . info['warning'])
+    call add(msgs, ' ' . info['warning'])
   endif
   return join(msgs, ' ')
 endfunction
