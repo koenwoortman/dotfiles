@@ -14,6 +14,9 @@ set TERM xterm-termite
 
 set PATH ~/bin ~/.config/composer/vendor/bin ~/.local/bin ~/.rbenv/bin $PATH
 
+set ANDROID_HOME ~/desktop/Android
+set JAVA_HOME /usr/lib64/jvm/java-12-openjdk-12
+
 status --is-interactive; and source (rbenv init -|psub)
 
 set fish_greeting
@@ -38,6 +41,7 @@ alias gp="git push"
 alias gs="git status"
 alias h="cd ~ && cd "
 alias t="tmux"
+alias tn="tmux new -s"
 alias v="nvim"
 alias vim="nvim"
 alias wiki="nvim ~/wiki/index.md"
