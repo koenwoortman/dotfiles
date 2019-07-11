@@ -54,10 +54,6 @@ let g:closetag_regions = {
     \ 'javascript.jsx': 'jsxRegion',
     \ }
 
-" ~> Emmet
-" let g:user_emmet_expandabbr_key='<Tab>'
-" imap <silent> <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-
 " ~> Gruvbox
 let g:gruvbox_contrast_light = 'medium'
 let g:gruvbox_bold = 1
@@ -65,8 +61,10 @@ let g:gruvbox_italic = 1
 let g:gruvbox_underline = 1
 
 " ~> Vimwiki config
-let g:vimwiki_list = [{'path': '~/wiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{
+	\ 'path': '~/wiki/',
+  \ 'syntax': 'markdown', 'ext': '.md'
+	\ }]
 
 " ~> Coc
 " Remap keys for gotos
@@ -78,8 +76,6 @@ nmap <silent> gr <Plug>(coc-references)
 " Use `[c` and `]c` to navigate diagnostics
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
-
-" Show commands
 
 " Show all diagnostics
 nnoremap <silent> <leader>a  :<C-u>CocList diagnostics<cr>
