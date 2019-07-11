@@ -60,6 +60,12 @@ set scrolloff=3
 " always show signcolumns
 set signcolumn=yes
 
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
 " ~> Enable all Python syntax highlighting features
 let python_highlight_all = 1
 
