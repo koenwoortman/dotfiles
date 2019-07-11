@@ -75,10 +75,10 @@ endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " Coc Styling
-hi CocErrorSign   guifg=#ff0000
-hi CocWarningSign guifg=#ff922b
-hi CocInfoSign    guifg=#15aabf
-hi CocHintSign    guifg=#15aabf
+hi CocErrorSign   guifg=#ff0000 guibg=#ebdab4
+hi CocWarningSign guifg=#ff922b guibg=#ebdab4
+hi CocInfoSign    guifg=#15aabf guibg=#ebdab4
+hi CocHintSign    guifg=#15aabf guibg=#ebdab4
 
 hi default link CocErrorHighlight CocHighlightText
 hi default link CocWarningSign CocHighlightText

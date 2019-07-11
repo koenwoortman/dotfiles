@@ -1,6 +1,9 @@
 " ~> Use spacebar as leader
 let mapleader = "\<Space>"
 
+" No side effects for using leader
+nmap <leader> <nop>
+
 " Quicker write
 nmap <leader>w :w<CR>
 
