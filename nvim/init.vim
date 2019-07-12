@@ -57,13 +57,13 @@ set linebreak
 " ~> Keep some screen space
 set scrolloff=3
 
-" always show signcolumns
+" ~> Always show signcolumns
 set signcolumn=yes
 
-" You will have bad experience for diagnostic messages when it's default 4000.
+" ~> You will have bad experience for diagnostic messages when it's default 4000.
 set updatetime=300
 
-" don't give |ins-completion-menu| messages.
+" ~> Don't give |ins-completion-menu| messages.
 set shortmess+=c
 
 " ~> Enable all Python syntax highlighting features
@@ -80,7 +80,7 @@ endfun
 " ~> Trim whitespaces on save
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-" Coc Styling
+" ~> Coc Styling
 hi CocErrorSign   guifg=#ff0000 guibg=#ebdab4
 hi CocWarningSign guifg=#ff922b guibg=#ebdab4
 hi CocInfoSign    guifg=#15aabf guibg=#ebdab4
@@ -90,3 +90,5 @@ hi default link CocErrorHighlight CocHighlightText
 hi default link CocWarningSign CocHighlightText
 hi default link CocInfoHighlight CocHighlightText
 hi default link CocHintHighlight CocHighlightText
+
+autocmd FileType php set iskeyword+=$
