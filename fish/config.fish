@@ -8,7 +8,7 @@ end
 fish_vi_key_bindings
 set fish_escape_delay_ms 10
 
-set -U EDITOR nvim
+set -x EDITOR nvim
 
 set TERM xterm-termite
 
