@@ -54,6 +54,7 @@ alias zs="zypper search"
 
 alias maria="mysql -p"
 alias ptest="phpunit -c tests/phpunit.xml --testdox --testsuite"
+alias ssh='env TERM=xterm-256color ssh'
 
 # set fish_color_normal white
 set fish_color_command green

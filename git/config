@@ -2,7 +2,7 @@
   email = k.woortman@m2mobi.com
   name = Koen Woortman
 [url "git@git.m2mobi.com:"]
-  insteadOf = "m2:" 
+  insteadOf = "m2:"
 [color]
   ui = true
 [core]
@@ -21,6 +21,7 @@
   amend = commit --amend
   graph = log --all --decorate --oneline --graph
   last = log -1 HEAD
+  parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
   pop = stash pop
   prune = fetch --prune
   stash-all = stash save --include-untracked
