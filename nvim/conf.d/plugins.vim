@@ -96,8 +96,9 @@ nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
 nnoremap <silent> <leader>r  :<C-u>CocList outline<cr>
 
 " ~> Ale
-let g:ale_fix_on_save = 1
-let g:ale_set_highlights = 0
+let g:ale_lint_on_insert_leave = 1
+let g:ale_fix_on_save = 0
+let g:ale_set_highlights = 1
 let g:ale_sign_column_always = 1
 let g:ale_php_phpcs_use_global = 1
 let g:ale_php_phpcbf_use_global = 1
@@ -111,4 +112,5 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \   'php': ['php', 'phpcs', 'phpmd'],
+\   'typescript': ['tslint'],
 \}
