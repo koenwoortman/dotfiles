@@ -49,6 +49,8 @@ alias v="nvim"
 alias vim="nvim"
 alias wiki="nvim ~/wiki/index.md"
 
+alias rm="rm -i"
+
 alias zi="sudo zypper install"
 alias zs="zypper search"
 
