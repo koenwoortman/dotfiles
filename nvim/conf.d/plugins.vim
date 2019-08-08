@@ -95,6 +95,9 @@ nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
 " Search document symbols
 nnoremap <silent> <leader>r  :<C-u>CocList outline<cr>
 
+" ~> GitGutter
+let g:gitgutter_enabled = 0
+
 " ~> Ale
 let g:ale_lint_on_insert_leave = 1
 let g:ale_fix_on_save = 0
