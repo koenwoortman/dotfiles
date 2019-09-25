@@ -46,7 +46,6 @@ alias tks="tmux kill-server"
 alias tls="tmux list-sessions"
 alias tn="tmux new -s"
 alias v="nvim"
-alias vim="nvim"
 alias wiki="nvim ~/wiki/index.md"
 
 alias rm="rm -i"
