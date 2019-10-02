@@ -14,6 +14,7 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'editorconfig/editorconfig-vim'
 
 " ~> Linting
 Plug 'w0rp/ale'
