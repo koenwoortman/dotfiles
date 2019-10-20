@@ -11,7 +11,7 @@
     "editor.minimap.enabled": false,
     "editor.renderFinalNewline": false,
 
-    "workbench.colorTheme": "Gruvbox Dark (Medium)",
+    "workbench.colorTheme": "Gruvbox Light (Medium)",
     "workbench.editor.showIcons": false,
     "workbench.editor.enablePreview": true,
     "workbench.activityBar.visible": false,
@@ -19,8 +19,6 @@
     "workbench.startupEditor": "newUntitledFile",
 
     "explorer.openEditors.visible": 0,
-
-    "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "files.exclude": {
@@ -36,5 +34,9 @@
     "vim.leader": "<space>",
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/bin/nvim",
-    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar"
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "php-cs-fixer.lastDownload": 1570516668315,
+    "editor.useTabStops": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false
 }
