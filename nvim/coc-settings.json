@@ -1,5 +1,4 @@
 {
-  "diagnostic.errorSign": "●",
-  "diagnostic.warningSign": "●",
-  "diagnostic.infoSign": "●"
+  "suggest.maxCompleteItemCount": 10,
+  "coc.preferences.formatOnSaveFiletypes": ["javascript"]
 }

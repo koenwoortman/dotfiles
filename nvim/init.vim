@@ -1,94 +1,166 @@
-" Load config files
-for f in split(glob('~/.config/nvim/conf.d/*.vim'), '\n')
-  exe 'source' f
-endfor
+" ============================================================================
+" PLUGINS {{{
+" ============================================================================
+call plug#begin('~/.local/share/nvim/plugged')
 
-" ~> Break compatibility with VI
-set nocompatible
+" UI
+Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
 
-" ~> Set colors
-syntax on
-set termguicolors
+" Colors
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 
-colorscheme gruvbox
-set background=light
+" Syntax
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'pangloss/vim-javascript'
+Plug 'styled-components/vim-styled-components'
+Plug 'StanAngeloff/php.vim'
 
-" ~> File type detection filetype on
+" Edit
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'SirVer/ultisnips'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'jiangmiao/auto-pairs'
+
+" Work in progress
+Plug '~/self/flut.vim'
+
+call plug#end()
+" }}}
+
+" File type detection filetype on
 filetype plugin on
 filetype indent on
 
-" ~> Prevent VIM from beeping
+" Prevent VIM from beeping
 set novisualbell
 set noerrorbells
 
-" ~> Hide the intro message
+" Relative line numbers
+set number
+set relativenumber
+set scrolloff=3
+
+" No linebreaks in the middle of a word
+set linebreak
+
+" Always show signcolumns
+set signcolumn=yes
+
+" Hide current mode, since it is shown in statusline
+set noshowmode
+
+" Hide the intro message
 set shortmess=I
 
-" ~> Tabs
-set expandtab
-set smarttab
+" Search
+set smartcase
+
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set expandtab
+set autoindent
+set fileformat=unix
 
-" ~> Search
-set smartcase
+set list listchars=tab:>-,trail:-,eol:¬
 
-" ~> Line numbers
-set number
-set relativenumber
+" True color support for the terminal
+set termguicolors
+colorscheme onedark
 
-" ~> Allow for project specific vimrc's
-set exrc
-set secure
+" Map leader key to space bar
+nnoremap <Space> <Nop>
+let mapleader = "\<Space>"
 
-" Better display for messages
-set cmdheight=2
+" Edit init.vim configuration file
+nnoremap <Leader>ve :e $MYVIMRC<CR>
+" Reload init.vim configuration file
+nnoremap <Leader>vr :so $MYVIMRC<CR>
 
-" ~> Search
-set smartcase
+nnoremap <Leader>pi :PlugInstall<CR>
 
-" ~> Show newline
-set list listchars=tab:\ \ ,trail:-,eol:¬
+nnoremap <Leader>se :UltiSnipsEdit<CR>
 
-" ~> No linebreaks in the middle of a word
-set linebreak
+nnoremap <Leader>gdf :GitGutterToggle<CR>
 
-" ~> Keep some screen space
-set scrolloff=3
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>bw :w<CR>:bd<CR>
+nnoremap <Leader>q :bd<CR>
 
-" ~> Always show signcolumns
-set signcolumn=yes
+nnoremap <Leader>e :GFiles<CR>
+nnoremap <Leader>E :Files<CR>
 
-" ~> You will have bad experience for diagnostic messages when it's default 4000.
+nnoremap <Leader>h :bprev<CR>
+nnoremap <Leader>l :bnext<CR>
+
+nnoremap <silent> <Leader>p  :<C-u>CocList commands<cr>
+nnoremap <silent> <Leader>r :<C-u>CocList outline<CR>
+
+nmap <Leader>fb :NERDTreeToggle<CR>
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <Leader>rn <Plug>(coc-rename)
+
+" Disable bad keys
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+noremap <PageUp> <nop>
+noremap <PageDown> <nop>
+noremap <Home> <nop>
+noremap <End> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+inoremap <PageUp> <nop>
+inoremap <PageDown> <nop>
+inoremap <Home> <nop>
+inoremap <End> <nop>
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_c = ''
+let g:airline_section_y = ''
+let g:airline_section_x = ''
+let g:airline_section_z = ''
+
+" define where snippets are stored
+let g:UltiSnipsSnippetDirectories = [ '~/.config/coc/ultisnips' ]
+
+" You will have bad experience for diagnostic messages when it's default 4000.
 set updatetime=300
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
-" ~> Don't give |ins-completion-menu| messages.
-set shortmess+=c
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-" ~> Enable all Python syntax highlighting features
-let python_highlight_all = 1
+" Navigate snippet placeholders using tab
+let g:coc_snippet_next = '<Tab>'
+let g:coc_snippet_prev = '<S-Tab>'
 
-" ~> Trim whitespace function
-fun! <SID>StripTrailingWhitespaces()
-  let l = line(".")
-  let c = col(".")
-  %s/\s\+$//e
-  call cursor(l, c)
-endfun
+" Use enter to accept snippet expansion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
 
-" ~> Trim whitespaces on save
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
-" ~> Coc Styling
-hi CocErrorSign   guifg=#ff0000 guibg=#ebdab4
-hi CocWarningSign guifg=#ff922b guibg=#ebdab4
-hi CocInfoSign    guifg=#15aabf guibg=#ebdab4
-hi CocHintSign    guifg=#15aabf guibg=#ebdab4
-
-hi default link CocErrorHighlight CocHighlightText
-hi default link CocWarningSign CocHighlightText
-hi default link CocInfoHighlight CocHighlightText
-hi default link CocHintHighlight CocHighlightText
-
-autocmd FileType php set iskeyword+=$
+" If you don't want vim-gitgutter to set up any mappings at all, use this:
+let g:gitgutter_map_keys = 0
