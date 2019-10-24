@@ -28,6 +28,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'dense-analysis/ale'
 
 " Work in progress
 Plug '~/self/flut.vim'
