@@ -6,6 +6,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " UI
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-vinegar'
 
 " Colors
 Plug 'dracula/vim', { 'as': 'dracula' }
