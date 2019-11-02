@@ -14,6 +14,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 
 " Syntax
+Plug 'fatih/vim-go'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'pangloss/vim-javascript'
