@@ -167,3 +167,21 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
 
 " If you don't want vim-gitgutter to set up any mappings at all, use this:
 let g:gitgutter_map_keys = 0
+
+" Ale config
+let g:ale_lint_on_insert_leave = 1
+let g:ale_fix_on_save = 0
+let g:ale_set_highlights = 1
+let g:ale_sign_column_always = 1
+let g:ale_php_phpcs_use_global = 1
+let g:ale_php_phpcbf_use_global = 1
+let g:ale_php_phpcs_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
+let g:ale_php_phpcbf_standard = '~/m2mobi/m2mobi-coding-standard/M2mobi'
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+let g:ale_linters = {
+\   'php': ['php', 'phpcs', 'phpmd'],
+\   'typescript': ['tslint'],
+\}
