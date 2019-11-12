@@ -32,8 +32,11 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dense-analysis/ale'
 
+" Misc
+Plug 'vimwiki/vimwiki'
+
 " Work in progress
-Plug '~/self/flut.vim'
+" Plug '~/self/flut.vim'
 
 call plug#end()
 " }}}
