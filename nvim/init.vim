@@ -33,7 +33,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'dense-analysis/ale'
 
 " Misc
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 
 " Work in progress
 " Plug '~/self/flut.vim'
@@ -117,6 +117,14 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <Leader>rn <Plug>(coc-rename)
+
+" Remap vimwiki
+" nmap <Leader>di <Plug>VimwikiIndex
+" nmap <Leader>dti <Plug>VimwikiTabIndex
+" nmap <Leader>dws <Plug>VimwikiUISelect
+" nmap <Leader>ddi <Plug>VimwikiDiaryIndex
+" nmap <Leader>ddn <Plug>VimwikiMakeDiaryNote
+" nmap <Leader>ddt <Plug>VimwikiTabMakeDiaryNote
 
 " Disable bad keys
 noremap <Up> <nop>
