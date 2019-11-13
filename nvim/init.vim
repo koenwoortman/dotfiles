@@ -20,6 +20,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'pangloss/vim-javascript'
 Plug 'styled-components/vim-styled-components'
 Plug 'StanAngeloff/php.vim'
+Plug 'jwalton512/vim-blade'
 
 " Edit
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
